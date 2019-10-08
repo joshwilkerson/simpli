@@ -1,7 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './components/app'
 
-import './index.css'
-import App from './App'
+import './assets/sass/main.scss'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('app'))
+
+if (module.hot) {
+	module.hot.accept()
+}
