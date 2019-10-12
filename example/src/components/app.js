@@ -1,14 +1,25 @@
 import React from "react"
-import { Button, Banner } from "simpli"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import Nav from "./nav"
+
+import { IndexPage, ButtonPage, BannerPage } from "./routes"
 
 const App = () => {
 	return (
-		<div style={{ padding: 20 }}>
-			<h1>Simpli</h1>
-			<h3>React Component Library</h3>
-			<Banner />
-			<Button />
-		</div>
+		<BrowserRouter>
+			<Nav />
+			<Switch>
+				<Route path="/" exact>
+					<IndexPage />
+				</Route>
+				<Route path="/button">
+					<ButtonPage />
+				</Route>
+				<Route path="/banner">
+					<BannerPage />
+				</Route>
+			</Switch>
+		</BrowserRouter>
 	)
 }
 
