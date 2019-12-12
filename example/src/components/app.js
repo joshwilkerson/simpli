@@ -1,23 +1,16 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import Nav from "./nav"
 
-import { IndexPage, ButtonPage, BannerPage } from "./routes"
+import { IndexPage, ButtonPage, BannerPage, CheckboxPage } from "./routes"
 
 const App = () => {
 	return (
-		<BrowserRouter>
-			<Nav />
+		<BrowserRouter basename="/simpli">
 			<Switch>
-				<Route path="/" exact>
-					<IndexPage />
-				</Route>
-				<Route path="/button">
-					<ButtonPage />
-				</Route>
-				<Route path="/banner">
-					<BannerPage />
-				</Route>
+				<Route exact path="/" component={IndexPage} />
+				<Route path="/button" component={ButtonPage} />
+				<Route path="/banner" component={BannerPage} />
+				<Route path="/checkbox" component={CheckboxPage} />
 			</Switch>
 		</BrowserRouter>
 	)

@@ -1,11 +1,12 @@
-import React, { Fragment } from "react"
+import React from "react"
+import Layout from "../layout"
 import { Banner } from "simpli"
 
 const BannerPage = () => {
 	return (
-		<Fragment>
+		<Layout>
 			<Banner />
-		</Fragment>
+		</Layout>
 	)
 }
 

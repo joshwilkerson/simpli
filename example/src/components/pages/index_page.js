@@ -1,11 +1,12 @@
 import React from "react"
+import Layout from "../layout"
+import StarContainer from "../star_container"
 
 const IndexPage = () => {
 	return (
-		<div>
-			<h1>Simpli</h1>
-			<h3>React Component Library</h3>
-		</div>
+		<Layout>
+			<StarContainer />
+		</Layout>
 	)
 }
 

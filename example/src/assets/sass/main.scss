@@ -5,3 +5,18 @@ body {
 	font-size: 100%;
 	font-family: sans-serif;
 }
+
+.page {
+	padding: 2em;
+}
+
+nav {
+	margin-bottom: 1em;
+}
+
+.stars-container {
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid red;
+	padding: 1em;
+}
