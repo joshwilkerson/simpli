@@ -8,9 +8,9 @@ const colors = ["#4C1A57", "#FF3CC7", "#F0F600", "#00E5E8"]
 const StarShape = styled(motion.div)`
 	display: flex;
 	overflow: hidden;
-	width: 36px;
-	height: 36px;
-	margin: 8px;
+	width: ${props => props.starsSize}px;
+	height: ${props => props.starsSize}px;
+	margin: ${props => props.starsSpacing}px;
 	position: relative;
 
 	svg {
@@ -26,12 +26,17 @@ const HoverAnimation = {
 	rotate: 15,
 }
 
+const HoverAnimationSubtle = {
+	scale: 1.1,
+	rotate: 5,
+}
+
 const TapAnimation = {
 	scale: 0.8,
 	rotate: -5,
 }
 
-const Star = () => {
+const Star = ({ starsHover, starsSize, starsSpacing }) => {
 	const [colorIndex, setColorIndex] = useState(0)
 	const currentColor = colors[colorIndex]
 
@@ -46,10 +51,14 @@ const Star = () => {
 	return (
 		<Fragment>
 			<StarShape
-				whileHover={HoverAnimation}
-				whileTap={TapAnimation}
-				onMouseOver={updateColorIndex}
+				whileHover={starsHover ? HoverAnimation : HoverAnimationSubtle}
+				whileTap={!starsHover && TapAnimation}
+				onMouseOver={starsHover ? updateColorIndex : undefined}
+				onClick={!starsHover ? updateColorIndex : undefined}
 				currentColor={currentColor}
+				starsHover={starsHover}
+				starsSpacing={starsSpacing}
+				starsSize={starsSize}
 			>
 				<Shape />
 			</StarShape>
