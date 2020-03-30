@@ -1,4 +1,5 @@
-![Simpli logo](../assets/simpli-logo-sm.png?raw=true)
+<img src="https://github.com/joshwilkerson/simpli/blob/assets/simpli-logo-lg.png" width="300" height="103" alt="Simpli logo" />
+
 
 # Simpli
 **A React component library focused on simple, streamlined APIs**
