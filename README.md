@@ -1,3 +1,5 @@
+![Simpli logo](../assets/simpli-logo-sm.png?raw=true)
+
 # Simpli
 **A React component library focused on simple, streamlined APIs**
 
