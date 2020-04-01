@@ -1,7 +1,9 @@
 /* eslint no-unused-vars: 0 */
 import React from 'react'
 
-import Button from './button'
+import Alert from './alert'
 import Banner from './banner'
+import Button from './button'
 
-export { Button, Banner }
+
+export { Alert, Banner, Button } 
